@@ -2,6 +2,10 @@ language: csharp
 
 install:
 
+env:
+  global:
+    - AzureStorageConnectionString="DefaultEndpointsProtocol=https;AccountName=mbrace826e7a5a;AccountKey=I7HgrOFp7IhR/0iqWR9gRPHiOa7O4m15hLtr8e+Gp5VqX2CTU/YYmiqY+F9AJvTBa9YlSYuBns/oJnwFbpon8w=="
+    - AzureServiceBusConnectionString="Endpoint=sb://mbrace585c4642.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=S2JG+PzHFbmJB1f59zGoLxf49s/zMNTYF3vDj0ggdAI="
 
 script: 
-  - ./build.sh PrepareRelease
+  - ./build.sh
