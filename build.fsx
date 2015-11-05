@@ -221,12 +221,10 @@ Target "Help" (fun _ -> PrintTargets() )
 "Clean"
   ==> "AssemblyInfo"
   ==> "Build"
+  ==> "RunTests"
   ==> "Default"
 
 "RunTests"
-  ==> "PrepareRelease"
-
-"Build"
   ==> "BuildPackages"
   ==> "PrepareRelease"
   ==> "NuGet"
