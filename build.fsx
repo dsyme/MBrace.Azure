@@ -133,7 +133,7 @@ Target "RunTests" (fun _ ->
             DisableShadowCopy = false
             ToolPath = nunitPath
             Framework = "4.5"
-            IncludeCategory = "Standalone Cluster"
+            IncludeCategory = "Remote Cluster"
             TimeOut = TimeSpan.FromMinutes 60. })
 )
 
@@ -221,8 +221,10 @@ Target "Help" (fun _ -> PrintTargets() )
 "Clean"
   ==> "AssemblyInfo"
   ==> "Build"
-  ==> "RunTests"
   ==> "Default"
+
+"RunTests"
+  ==> "PrepareRelease"
 
 "Build"
   ==> "BuildPackages"
